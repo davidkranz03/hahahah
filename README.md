@@ -1,2 +1,75 @@
 # hahahah
 Insta Login Demo
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Instagram-Demo Login</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #fafafa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .login-box {
+    background-color: white;
+    border: 1px solid #dbdbdb;
+    padding: 40px;
+    width: 300px;
+    text-align: center;
+    border-radius: 5px;
+  }
+  .login-box img {
+    width: 150px;
+    margin-bottom: 20px;
+  }
+  input {
+    width: 90%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+  }
+  button {
+    width: 95%;
+    padding: 8px;
+    margin-top: 10px;
+    background-color: #3897f0;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: #2a6ebd;
+  }
+  #message {
+    margin-top: 10px;
+    color: green;
+  }
+</style>
+</head>
+<body>
+
+<div class="login-box">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram Logo">
+  <form id="loginForm">
+    <input type="text" placeholder="Benutzername" required><br>
+    <input type="password" placeholder="Passwort" required><br>
+    <button type="submit">Anmelden</button>
+  </form>
+  <p id="message"></p>
+</div>
+
+<script>
+document.getElementById("loginForm").addEventListener("submit", function(e){
+    e.preventDefault(); // Verhindert echtes Absenden
+    document.getElementById("message").innerText = "Login erfolgreich (Demo)! ✅";
+});
+</script>
+
+</body>
+</html>
